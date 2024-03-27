@@ -6,6 +6,8 @@
     --primary-bgc: #fffcf4;
     --primary-title-c: #171100;
     --font-title: Sen, sans-serif;
+    --primary-color: #ffb900;
+    --primary-desc-c: #5f5b53;
 }
 
 html {
@@ -44,7 +46,30 @@ a {
 
 .btn:hover {
     opacity: 0.9;
+    cursor: pointer;
 }
+
+.heading {
+    font-family: var(--font-title);
+    letter-spacing: -0.02em;
+    text-align: left;
+    color: var(--primary-title-c);
+}
+
+.heading.lv1 {
+    font-size: 5.8rem;
+    line-height: 1.17;
+}
+
+.heading.lv2 {
+    font-size: 3.8rem;
+    line-height: 1.26;
+}
+
+.break-all {
+    word-break: break-word;
+}
+
 /* ===Header=== */
 
 header.fixed {
@@ -93,7 +118,7 @@ header.fixed {
     width: 12px;
     height: 2px;
     border-radius: 1px 0px 0px 0px;
-    background-color: var(--primary-title-c);
+    background-color: #171100;
 }
 
 .header .sign-up {
@@ -136,7 +161,18 @@ header.fixed {
     font-weight: 600;
     line-height: 30px;
     text-align: left;
-    color: #171100;
+    color: var(--primary-title-c);
+}
+
+.line-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: var(--line-clamp, 1);
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.line-clamp.line-2 {
+    --line-clamp: 2;
 }
 
 .hero .media-block .item + .item {
@@ -181,12 +217,6 @@ header.fixed {
     margin-left: 16px;
 }
 
-.hero .icon a {
-    position: absolute;
-    display: inline-block;
-    justify-content: center;
-}
-
 .hero .content-block {
     padding: 64px 0 0 130px;
     width: 52%;
@@ -194,23 +224,12 @@ header.fixed {
     border-radius: 32px 0px 0px 0px;
 }
 
-.hero h1 {
-    font-family: var(--font-title);
-    font-size: 5.8rem;
-    font-weight: 700;
-    line-height: 68px;
-    letter-spacing: -0.02em;
-    text-align: left;
-    color: var(--primary-title-c);
-}
-
 .hero .content-block .desc {
+    margin-top: 22px;
     font-size: 1.8rem;
     font-weight: 400;
-    line-height: 30px;
-    text-align: left;
+    line-height: 1.67;
     color: #5f5b53;
-    margin-top: 22px;
 }
 
 .hero .content-block .cta-group {
@@ -260,7 +279,7 @@ header.fixed {
 }
 
 .hero .content-block .see-course {
-    background-color: #ffb900;
+    background-color: var(--primary-color);
     min-width: 180px;
 }
 
@@ -276,4 +295,130 @@ header.fixed {
     line-height: 1.23;
     text-align: left;
     color: #171100;
+}
+
+/* POPULAR */
+
+.popular {
+    padding-top: 65px;
+    margin-top: 135px;
+}
+
+.popular .popular-top {
+    display: flex;
+    align-items: center;
+}
+
+.popular .popular-top .desc {
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 30px;
+    /* text-align: left; */
+    color: var(--primary-desc-c);
+    margin-top: 22px;
+    max-width: 485px;
+}
+
+.popular .popular-top .controls {
+    display: flex;
+    margin-left: auto;
+    gap: 18px;
+}
+
+.popular-top .controls-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 50%;
+    background-color: transparent;
+}
+
+.popular-top .controls-btn:hover {
+    color: #fff;
+    background: var(--primary-color);
+    cursor: pointer;
+}
+
+.course-list {
+    display: flex;
+    margin-top: 55px;
+    gap: 30px;
+}
+
+.course-list .list-item {
+    flex: 1px;
+    background-color: #fff;
+    border: 1px solid #e2dfda;
+    border-radius: 12px;
+}
+
+.course-list .list-item:hover {
+    border-color: transparent;
+    box-shadow: 0px 18px 36px 0px #0000000d;
+}
+
+.course-list .list-item .thumb {
+    width: 100%;
+    height: 278px;
+    object-fit: cover;
+    border-radius: 12px 12px 0 0;
+}
+
+.course-list .list-item .info {
+    padding: 16px 22px 22px;
+}
+
+.course-list .list-item .title a {
+    padding-right: 6px;
+    font-size: 1.8rem;
+    line-height: 1.67;
+    font-weight: 600;
+    text-align: left;
+    color: var(--primary-title-c);
+}
+
+.course-list .info .foot,
+.course-list .info .head .rating,
+.course-list .info .head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.course-list .foot {
+    margin-top: 12px;
+}
+
+.course-list .value {
+    color: #fea31b;
+    margin-left: 6px;
+}
+
+.course-list .list-item .desc {
+    margin-top: 6px;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.86;
+    color: var(--primary-desc-c);
+}
+
+.course-list .list-item strong {
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.67;
+    text-align: left;
+    color: #171100;
+}
+
+.course-list .book-btn {
+    border: none;
+}
+
+.course-list .book-btn:hover {
+    color: #fff;
+    background: var(--primary-color);
 }
