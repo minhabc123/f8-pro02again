@@ -300,7 +300,7 @@ header.fixed {
 /* POPULAR */
 
 .popular {
-    padding-top: 65px;
+    padding: 65px 0 200px;
     margin-top: 135px;
 }
 
@@ -421,4 +421,80 @@ header.fixed {
 .course-list .book-btn:hover {
     color: #fff;
     background: var(--primary-color);
+}
+
+/* FEEDBACK */
+
+.feedback {
+    background-color: #2e2100;
+    padding: 96px 0;
+}
+
+.feedback-list {
+    display: flex;
+    overflow: hidden;
+}
+
+.feedback-item {
+    display: flex;
+    flex-shrink: 0;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.feedback .info {
+    width: 13.6%;
+}
+
+.feedback .quote-content {
+    width: 65.8%;
+}
+
+.feedback .avt {
+    width: 72px;
+    height: 72px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.feedback .info .title {
+    font-family: Sen;
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 1.41;
+    color: #f7f7f7;
+}
+
+.feedback .info .desc {
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.86;
+    color: var(--primary-desc-c);
+}
+
+.feedback .info .dots {
+    display: flex;
+    margin-top: 28px;
+}
+
+.feedback .info .dot {
+    margin-right: 6px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #634700;
+    cursor: pointer;
+}
+
+.feedback-item .dot.active {
+    background-color: var(--primary-color);
+    cursor: default;
+}
+
+.feedback .quote-content blockquote {
+    margin-left: 30px;
+    font-size: 2.6rem;
+    font-style: italic;
+    line-height: 1.54;
+    color: #fff;
 }
