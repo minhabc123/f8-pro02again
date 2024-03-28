@@ -175,6 +175,10 @@ header.fixed {
     --line-clamp: 2;
 }
 
+.line-clamp.line-3 {
+    --line-clamp: 3;
+}
+
 .hero .media-block .item + .item {
     margin-top: 22px;
 }
@@ -497,4 +501,77 @@ header.fixed {
     font-style: italic;
     line-height: 1.54;
     color: #fff;
+}
+
+/* FEATURE */
+
+.feature {
+    margin-top: 135px;
+    padding: 65px 0;
+}
+
+.feature .body {
+    display: flex;
+    justify-content: space-between;
+}
+
+.feature .image {
+    display: flex;
+    width: 48.7%;
+    justify-content: space-between;
+}
+
+.feature .image img {
+    width: 270px;
+    height: 404px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.feature .image img:nth-of-type(1) {
+    margin-top: 34px;
+}
+
+.feature .feature-content {
+    width: 40.2%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.feature .feature-content .desc {
+    margin-top: 16px;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.75;
+    color: var(--primary-desc-c);
+}
+
+.feature .feature-content .btn {
+    margin-top: 32px;
+    background-color: var(--primary-color);
+    min-width: 137px;
+}
+
+.feature-2nd {
+    margin-top: 70px;
+}
+
+.feature-2nd .body {
+    flex-direction: row-reverse;
+}
+
+.feature .feature-content {
+    width: 48.7%;
+}
+
+.feature-2nd .image {
+    width: 40.2%;
+}
+
+.feature-2nd .image img {
+    width: 470px;
+    height: 440px;
+    margin-top: -34px;
 }
